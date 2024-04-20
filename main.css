@@ -1,4 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Roboto';
+}
 
 .information {
     display: flex;
@@ -28,17 +36,18 @@
     color: black;
 }
 
-a {
+a.contenline {
     text-decoration: none;
     position: relative;
+    color: #222;
 }
 
-a:hover:before,
-a:hover:after {
+a.contenline:hover:before,
+a.contenline:hover:after {
     width: 50%;
 }
 
-a:before{
+a.contenline:before {
     content: "";
     display: block;
     width: 0%;
@@ -50,13 +59,13 @@ a:before{
     transition: width 0.3s;
 }
 
-a:after {
+a.contenline:after {
     content:"";
     display: block;
     width: 0%;
     height: 2px;
     background-color: black;
-    position: relative;
+    position: absolute;
     left: 50%;
     bottom: 0;
     transition: width .3s;
@@ -117,7 +126,7 @@ a:after {
 
 button {
     border-radius: 8px;
-    padding: 10px,23px,10px,23px;
+    padding: 10px 23px;
     font-size: 16px;
     border: none;
     font-family: 'Raleway';
@@ -134,7 +143,7 @@ button:hover {
     padding: 10px,23px,10px,23px;
     font-size: 16px;
     border: none;
-    background-color: #c7f5e4;
+    background-color: #acf3d9;
     color: rgb(0, 0, 0);
     gap: 10px;
 }
@@ -153,7 +162,6 @@ button:hover {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        font-family: 'DM Sans';
         font-size: 17px;
         color: black;
     }
@@ -192,6 +200,7 @@ button:hover {
     display: flex;
     font-size: 70px;
     font-family: 'Raleway';
+    font-weight: 700;
 }
 
 .direct {
@@ -206,6 +215,9 @@ button:hover {
     font-family: 'Raleway';
     align-items: center;
     margin-top: 60px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .ord {
@@ -220,16 +232,17 @@ button:hover {
     justify-content: center;
     position: relative;
     transition-duration: .3s;
+
 }
 
 .ord svg{
     fill: #fff;
 }
 
-.ord:hover {
+.order:hover .ord {
     background-color: #adf3d9;
 }
-.ord:hover svg{
+.order:hover .ord svg{
     fill: #222;
 }
 
@@ -279,7 +292,6 @@ img {
 }
 
 .opction {
-    font-family: 'DN Sans';
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -468,6 +480,7 @@ img {
 }
 
 .curier img {
+    max-width: 600px;
     width: 100%;
 }
 
@@ -512,7 +525,7 @@ img {
     transition-duration: .3s;
 }
 
-.icow:hover {
+.knopki:hover .icow {
     background-color: #fff;
     transition-duration: .4s;
     transition-property: all;
@@ -532,6 +545,17 @@ img {
     position: absolute;
     right:150px;
     top:-30px;
+}
+
+.ord svg{
+    fill: #fff;
+}
+
+.order:hover .ord {
+    background-color: #adf3d9;
+}
+.order:hover .ord svg{
+    fill: #222;
 }
 
 @media (max-width:350px) {
@@ -601,6 +625,7 @@ img {
     justify-content: center;
     background-color: #F3FBF8;
     position: relative;
+    padding: 90px;
 }
 
 .discover {
@@ -742,7 +767,6 @@ img {
     margin-top: 143px;
     color: #555555;
     font-size: 18px;
-    margin-top: 24px;
 }
 
 .rate {
@@ -754,7 +778,8 @@ img {
 }
 
 .zvezda {
-    margin-top: 8px;
+    display: flex;
+    gap: 8px;
 }
 
 @media (max-width:320px) {
@@ -841,6 +866,7 @@ img {
 }
 
 .phones {
+    display: flex;
     position: relative;
 }
 
@@ -856,12 +882,16 @@ img {
 }
 
 .bop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width:170px;
     height: 42px ;
     border-radius: 50px;
     color: black;
     font-family: 'Raleway';
     background-color: #F3FBF8;
+    padding: 12px 24px;
 }
 
 .markers {
@@ -938,6 +968,7 @@ gap: 24px;
         color: black;
         font-family: 'Raleway';
         background-color: #F3FBF8;
+        padding:12, 24 ;
     }
     
     .markers {
@@ -982,14 +1013,15 @@ gap: 24px;
 }
 
 .hera {
+    display: flex;
+    flex-direction: column;
     font-size: 24px;
-    align-items: center;
-    justify-content: center;
 }
 
 .hura {
     color: #222;
     margin: 24px;
+    margin-left: 0px;
     font-size: 18px;
     align-items: center;
     justify-content: center;
